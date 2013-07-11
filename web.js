@@ -3,7 +3,8 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  	var hello=fs.readFile('index.html')
+  	var fs=require('fs');
+	var hello=fs.readFile('index.html');
 	response.send(hello.toString);
 });
 
